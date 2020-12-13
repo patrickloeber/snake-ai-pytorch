@@ -28,7 +28,14 @@ font = pygame.font.Font('arial.ttf', 25)
 
 SPEED = 40
 
-class zz_game_ai:
+# reset
+# reward
+# play(action) -> direction
+# move(action)
+# frame_iteration
+# is collision with pt
+
+class SnakeGameAI:
 
     def __init__(self, w=640, h=480):        
         self.clock = pygame.time.Clock()
@@ -37,9 +44,10 @@ class zz_game_ai:
         self.h = h
         self.display = pygame.display.set_mode((self.w, self.h))
         pygame.display.set_caption('Deep Q Snake!')
-        self.reset()
+        self.reset()  # here
 
     def reset(self):
+         # here
         self.direction = Direction.RIGHT
 
         self.head = Point(self.w / 2, self.h / 2)        
@@ -59,25 +67,8 @@ class zz_game_ai:
         if self.food in self.snake:
             self._place_food()
 
-    def frame_step(self, action):
-        reward, done, score = self.play(action)
-        return reward, done, score
-
-
-    def is_collision(self, pt=None):
-        if pt is None:
-            pt = self.head
-                
-        if pt.x > self.w-20 or pt.x < 0 or pt.y > self.h-20 or pt.y < 0:
-            return True
-        if pt in self.snake[1:]:
-            return True
-        return False
-            
-        
-    # Snake and food
-    def play(self, action):
-        self.frame_iteration += 1
+    def play_step(self, action):
+        self.frame_iteration += 1 # here
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -89,26 +80,41 @@ class zz_game_ai:
         self.move(action)
         self.snake.insert(0, self.head)
 
-        reward = 0
+        reward = 0 # here
         done = False
         
+        # here:
         if self.is_collision() or self.frame_iteration > 100*len(self.snake):
             done = True
-            reward = -10
+            reward = -10 # here
             return reward, done, self.score
         
         if self.head == self.food:
             self._place_food()
             self.score += 1
-            reward = 10
+            reward = 10 # here
         else:
             self.snake.pop()
         
         self._update_ui()
         self.clock.tick(SPEED)
 
+        # here
         return reward, done, self.score
-    
+
+
+    def is_collision(self, pt=None):
+        # here
+        if pt is None:
+            pt = self.head
+                
+        if pt.x > self.w-20 or pt.x < 0 or pt.y > self.h-20 or pt.y < 0:
+            return True
+        if pt in self.snake[1:]:
+            return True
+        return False
+            
+      
     def _update_ui(self):
         self.display.fill(BLACK)
         
@@ -123,6 +129,7 @@ class zz_game_ai:
         pygame.display.flip()
 
     def move(self, action):
+         # here
         # [straight, right, left]
         
         clock_wise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
