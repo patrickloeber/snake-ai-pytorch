@@ -57,18 +57,19 @@ class SnakeGame:
     def play_step(self):
         # 1. collect user input
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                quit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    self.direction = Direction.LEFT
+                    if self.Dir!=Dir.RIGHT:
+                        self.Dir = Dir.LEFT
                 elif event.key == pygame.K_RIGHT:
-                    self.direction = Direction.RIGHT
+                    if self.Dir!=Dir.LEFT:
+                        self.Dir = Dir.RIGHT
                 elif event.key == pygame.K_UP:
-                    self.direction = Direction.UP
+                    if self.Dir!=Dir.DOWN:
+                        self.Dir = Dir.UP
                 elif event.key == pygame.K_DOWN:
-                    self.direction = Direction.DOWN
+                    if self.Dir!=Dir.UP:
+                        self.Dir = Dir.DOWN
         
         # 2. move
         self._move(self.direction) # update the head
