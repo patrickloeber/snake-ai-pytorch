@@ -7,7 +7,7 @@ This codebase favors explicit and straightforward logic over more abstract, comp
 ## Implementations:
 - **MC Exploring Starts**: Utilizes Monte Carlo methods with function approximation.
 - **SARSA**: Applies SARSA (State-Action-Reward-State-Action) with function approximation.
-- **REINFORCE**: Integrates the REINFORCE algorithm.
+- **REINFORCE**: Integrates the REINFORCE algorithm. (Not converging, still WIP)
 - **AC (Actor-Critic)**: Implements the Actor-Critic method. (Not converging, still WIP)
 - **A2C (Advantage Actor-Critic)**: Features the Advantage Actor-Critic approach. (Not converging, still WIP)
 - *More algorithms are planned to be added in future updates.*
