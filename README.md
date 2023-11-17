@@ -1,10 +1,19 @@
-# Teach AI To Play Snake! Reinforcement Learning With PyTorch and Pygame
+# Simple Implementations of Reinforcement Learning Algorithms for Snake Game with PyTorch and Pygame
 
-In this Python Reinforcement Learning Tutorial series we teach an AI to play Snake! We build everything from scratch using Pygame and PyTorch. The tutorial consists of 4 parts:
+This repository, an extension of the excellent tutorial by Patrick Loeber ([patrickloeber/snake-ai-pytorch](https://github.com/patrickloeber/snake-ai-pytorch)), significantly expands the original project by incorporating a variety of classic reinforcement learning (RL) algorithms. Originally featuring only Deep Q-Networks (DQN), this fork now offers an array of sophisticated RL strategies applied to the classic Snake game, all implemented using PyTorch and Pygame.
 
-You can find all tutorials on my channel: [Playlist](https://www.youtube.com/playlist?list=PLqnslRFeH2UrDh7vUmJ60YrmWd64mTTKV)
+This codebase favors explicit and straightforward logic over more abstract, complex structures, to facilitate learning and comprehension more on RL algorithms themselves.
 
-- Part 1: I'll show you the project and teach you some basics about Reinforcement Learning and Deep Q Learning.
-- Part 2: Learn how to setup the environment and implement the Snake game.
-- Part 3: Implement the agent that controls the game.
-- Part 4: Implement the neural network to predict the moves and train it.
+## Implementations:
+- **MC Exploring Starts**: Utilizes Monte Carlo methods with function approximation.
+- **SARSA**: Applies SARSA (State-Action-Reward-State-Action) with function approximation.
+- **REINFORCE**: Integrates the REINFORCE algorithm.
+- **AC (Actor-Critic)**: Implements the Actor-Critic method. (Not converging, still WIP)
+- **A2C (Advantage Actor-Critic)**: Features the Advantage Actor-Critic approach. (Not converging, still WIP)
+- *More algorithms are planned to be added in future updates.*
+
+## Getting Started:
+1. **To Train Agents**: Simply run the respective algorithm script, like `python agent_DQN.py`, to begin training the AI agent. The same process applies to other algorithms.
+2. **To Play Yourself**: If you'd like to play the Snake game manually, run `python snake_game_human.py`.
+
+Stay tuned for further updates and enhancements to this growing project!
