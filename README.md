@@ -13,11 +13,20 @@ This codebase favors explicit and straightforward logic over more abstract, comp
 - *More algorithms are planned to be added in future updates.*
 
 ## Demos:
-- ![DQN Agent playing Snake](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/main/gifs/DQN.gif)
+- DQN
+![DQN Demo](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/gifs/DQN.gif)
+![DQN Metrics](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/results/DQN.png)
+- MC Exploring Starts
+![MC Exploring Starts](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/gifs/MC_exploring_starts.gif)
+![MC Exploring Starts Metrics](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/results/MC_exploring_starts.png)
+- SARSA
+![SARSA](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/gifs/SARSA.gif)
+![SARSA Metrics](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/gifs/results/SARSA.png)
+
 
 
 ## Getting Started:
-1. **To Train Agents**: Simply run the respective algorithm script, like `python agent_DQN.py`, to begin training the AI agent. The same process applies to other algorithms.
+1. **To Train Agents**: Simply run the respective algorithm script, like `python agents/agent_DQN.py`, to begin training the AI agent. The same process applies to other algorithms.
 2. **To Play Yourself**: If you'd like to play the Snake game manually, run `python snake_game_human.py`.
 
 
