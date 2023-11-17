@@ -12,8 +12,13 @@ This codebase favors explicit and straightforward logic over more abstract, comp
 - **A2C (Advantage Actor-Critic)**: Features the Advantage Actor-Critic approach. (Not converging, still WIP)
 - *More algorithms are planned to be added in future updates.*
 
+## Demos:
+- ![DQN Agent playing Snake](https://github.com/SihanChen46/pytorch-rl-algorithms-implementation-snake/blob/main/gifs/DQN.gif)
+
+
 ## Getting Started:
 1. **To Train Agents**: Simply run the respective algorithm script, like `python agent_DQN.py`, to begin training the AI agent. The same process applies to other algorithms.
 2. **To Play Yourself**: If you'd like to play the Snake game manually, run `python snake_game_human.py`.
+
 
 Stay tuned for further updates and enhancements to this growing project!
